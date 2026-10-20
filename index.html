@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card-cep">
+        <h1 class="card-title">Consulta de CEP</h1>
+        <p class="card-description">Digite o CEP para buscar o endereço automaticamente.</p>
+
+        <form id="form_cep" novalidate>
+            <div class="campo campo-cep">
+                <label for="cep">CEP</label>
+                <input
+                    id="cep"
+                    name="cep"
+                    type="text"
+                    inputmode="numeric"
+                    autocomplete="postal-code"
+                    placeholder="00000-000"
+                    maxlength="9"
+                    aria-describedby="mensagem"
+                    required
+                >
+            </div>
+
+            <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+            <div class="campos-endereco">
+                <div class="campo campo-largo">
+                    <label for="logradouro">Logradouro</label>
+                    <input id="logradouro" name="logradouro" type="text" autocomplete="address-line1" readonly>
+                </div>
+                <div class="campo">
+                    <label for="complemento">Complemento</label>
+                    <input id="complemento" name="complemento" type="text" readonly>
+                </div>
+                <div class="campo">
+                    <label for="bairro">Bairro</label>
+                    <input id="bairro" name="bairro" type="text" readonly>
+                </div>
+                <div class="campo">
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" name="cidade" type="text" autocomplete="address-level2" readonly>
+                </div>
+                <div class="campo campo-estado">
+                    <label for="estado">Estado</label>
+                    <input id="estado" name="estado" type="text" autocomplete="address-level1" readonly>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

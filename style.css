@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.card-cep {
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 620px;
+}
+
+.card-title {
+    color: #25313c;
+    margin-bottom: 8px;
+    font-size: 26px;
+}
+
+.card-description {
+    color: #65727d;
+    margin-bottom: 24px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: #35424d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo input {
+    min-width: 0;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd3d9;
+    border-radius: 6px;
+    color: #29343d;
+    font-size: 15px;
+}
+
+.campo input:focus {
+    outline: 2px solid #7bb8f3;
+    outline-offset: 1px;
+    border-color: #2878c7;
+}
+
+.campo input[readonly] {
+    background-color: #f8f9fa;
+}
+
+#cep[aria-invalid="true"] {
+    border-color: #c62828;
+}
+
+.mensagem {
+    min-height: 22px;
+    margin: 10px 0 14px;
+    color: #52606b;
+    font-size: 14px;
+}
+
+.mensagem.erro {
+    color: #b42318;
+}
+
+.mensagem.sucesso {
+    color: #187044;
+}
+
+.campos-endereco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.campo-largo {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 16px;
+    }
+
+    .card-cep {
+        padding: 24px 18px;
+    }
+
+    .campos-endereco {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-largo {
+        grid-column: auto;
+    }
+}
